@@ -1,5 +1,5 @@
 import '@/app/ui/global.css';
-import { lusitana } from './ui/fonts';
+import { inter } from '@/app/ui/fonts';
 
 export default function RootLayout({
   children,
@@ -8,7 +8,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {children}
+        <footer className='px-5 py-2'> 
+          Developed for studying 
+        </footer>
+      </body>
     </html>
   );
 }
